@@ -76,7 +76,7 @@ public class Generator
 	
 	public String GetRandomCategory()
 	{
-		int i = ThreadLocalRandom.current().nextInt(0, 4);
+		int i = ThreadLocalRandom.current().nextInt(0, categories.length);
 		return this.categories[i];
 	}
 }
