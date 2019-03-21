@@ -9,16 +9,6 @@ public class Main
 	{
 		Main m = new Main();
 		
-		System.out.println("Name of sufix:");
-		String sufix = m.sc.nextLine();
-		
-		int instances = m.ReadInt("How many instances?");
-		if (instances <= 0)
-		{
-			System.out.println("Must be greater than 0");
-			return;
-		}
-		
 		int items = m.ReadInt("How many items?");
 		
 		if (items <= 0)
@@ -92,8 +82,7 @@ public class Main
 		}
 		
 		//System.out.println(String.format("%s %s %s %s %s %s %s %s", sufix, instances, items, vmax, vmin, wmax, wmin, alfa));
-		Generator g = new Generator(sufix, instances, items, vmax, vmin, wmax, wmin, alfa);
-		g.GenerateFiles();
+		Generator g = new Generator(items, vmax, vmin, wmax, wmin, alfa);
 		
 		System.out.println("Ready");
 	}
